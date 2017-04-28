@@ -1,0 +1,830 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4%;
+    flex-direction: column-reverse;
+  }
+
+  header figure {
+    width: 100%;
+    margin: 0%;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  .deroulant{
+    display: flex;
+    margin-left: 3%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 5px;
+  }
+
+  #menu-deroulant, #menu-deroulant ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border-radius: 10px;
+  }
+  #menu-deroulant {
+  /* on centre le menu dans la page */
+      text-align: left;
+  }
+  #menu-deroulant li {
+  /* on place les liens du menu horizontalement */
+      display: inline-block;
+  }
+  #menu-deroulant ul li {
+  /* on enlève ce comportement pour les liens du sous menu */
+      display: inherit;
+  }
+  #menu-deroulant a {
+      text-decoration: none;
+      display: block;
+  	color:black;
+    font-weight: 500;
+
+  }
+  #menu-deroulant ul {
+      position: absolute;
+  /* on cache les sous menus complètement sur la gauche */
+      left: -999em;
+      text-align: left;
+      z-index: 1000;
+  }
+  #menu-deroulant li:hover ul {
+  /* Au survol des li du menu on replace les sous menus */
+      left: auto;
+  }
+
+  #menu-deroulant .white a {
+    background-color: white;
+    border-bottom: 2px solid #C3B076;
+    color: black;
+    text-align: center;
+    padding: 4px 20px;
+  }
+
+#menu-deroulant .white a:hover {
+  background-color: #C3B076;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+#section1 {
+  background-image: url(../img/Image1mob.jpg);
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: 247px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+align-items: center;
+}
+
+#section1 .celinepresentation {
+  width: 100%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin: 14% 0% 0% 4%;
+}
+
+.celinepresentation h2 {
+  font-size: 20px;
+}
+
+.celinepresentation #pmobile a, .fleurlist ol .plus, .paraccompagnement .plus, #section3 .plus a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+.fleurlist #nonelist, .paraccompagnement .plus {
+  margin-top: 2%; }
+
+#pmobile {
+  font-size: 13px;
+width: 42%;
+}
+
+#pdeskt {
+  display: none;
+}
+
+#fleurgif {
+  display: none;
+}
+
+#demarchetitre {
+  margin-bottom: 3%;
+}
+
+.demarche {
+  margin-bottom: 4%;
+}
+
+.demarche ol {
+  text-align: center;
+list-style-type: none;
+}
+
+.sectioncitation h3 {
+  text-align: center;
+  font-style: italic;
+  line-height: 34px;
+  font-weight: lighter;
+  font-size: 15px;
+  border-top: 0.01px solid #C3B076;
+  border-bottom: 0.01px solid #C3B076;
+  margin: 0.6% 0%;
+}
+
+#secaccompagnement figure {
+  margin: 0%;
+  margin-top: 3%;
+}
+
+.paraccompagnement {
+  margin: 3% 0%;
+}
+
+.paraccompagnement h2 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.paraccompagnement ol {
+  text-align: center;
+list-style-type: none;
+margin-bottom: 3%;
+}
+
+#section3 figure {
+  display: none;
+}
+
+#section3 h2 {
+  text-align: center;
+  margin: 3% 0%;
+}
+
+#section3 ul {
+  text-align: center;
+list-style-type: none;
+font-style: italic;
+}
+
+#section3 ul li {
+  margin-bottom: 3%;
+}
+
+#contact h2 {
+  border-top: 0.01px solid #C3B076;
+  text-align: center;
+}
+
+#contact p {
+  text-align: center;
+}
+
+footer{
+  /*background-color: #656565;*/
+  justify-content: center;
+  align-self: center;
+  display:flex;
+  flex-direction: column;
+}
+.footerimage{
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-around;*/
+  margin: 5px auto;
+}
+footer a{
+  margin:2px;
+}
+
+footer p{
+  color: black;
+  text-align: center;
+  margin-top: 8px;
+}
+footer img{
+  width: 30px;
+  height: 30px;
+}
+@media (min-width: 768px) {
+
+  #section1 {
+    background-image: url(../img/Image1tab.jpg);
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    height: 547px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  align-items: center;
+  }
+
+  #section1 .celinepresentation h2 {
+    font-size: 33px;
+  }
+
+  #pmobile {
+    font-size: 26px;
+width: 42%;
+  }
+}
+
+  @media (min-width: 980px) {
+
+  .deroulant {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url(../img/ImageHeader.jpg);*/
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+header figure {
+  width: 60%;
+  margin: 0%;
+}
+
+header nav {
+  display: block;
+  width: 100%;
+  margin-bottom: 26%;
+  position: fixed;
+  top: 0%;
+}
+
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+justify-content: center;
+border-bottom: 0.01px solid #C3B076;
+padding: 1.5% 0%;
+background-color: white;
+}
+
+header nav ul li {
+  border-right: 0.01px solid #C3B076;
+  /*border-left: 2px solid #C3B076;*/
+}
+
+header nav ul li {
+  padding: 0% 2%;
+}
+
+header nav ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+header nav ul li a:hover {
+  color: #C3B076;
+  border-bottom: 3px solid #C3B076;
+  transition: 0.1s;
+}
+
+
+
+#section1 {
+  background-image: url(../img/Image1.jpg);
+  /*background-color: rgba(0, 0, 0, 0.5px);*/
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: 894px;
+  display: flex;
+justify-content: flex-start;
+}
+
+#section1 .celinepresentation {
+  width: 35%;
+margin: 14% 43% 13% 4%;
+height: 300px;
+}
+
+#pmobile {
+  display: none;
+}
+
+.celinepresentation #pdeskt {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  text-align: left;
+}
+
+#pdeskt br {
+  margin-top: 4%;
+}
+
+.celinepresentation h2 {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4%;
+}
+
+.sectioncitation {
+margin: 7% 0%;
+}
+
+.sectioncitation h3 {
+  text-align: center;
+  font-style: italic;
+  line-height: 55px;
+  font-weight: lighter;
+  font-size: 25px;
+  border-top: 0.01px solid #C3B076;
+  border-bottom: 0.01px solid #C3B076;
+padding: 3% 0%;
+  margin: 0.6% 0%;
+}
+
+
+.plus {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+#demarchetitre {
+  list-style-type: none;
+  margin-bottom: 4%;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.fleurlist ol {
+  list-style-type: none;
+  /*border: 1px solid #C3B076;
+  padding: 3%;
+  box-shadow: 2px 2px 2px black;*/
+}
+.demarche #nonelist {
+  list-style-type: none;
+  margin-top: 4%;
+}
+
+.demarche #nonelist a {
+  color: #C3B076;
+}
+
+.demarche h2 {
+  text-align: right;
+margin-top: 15%;
+}
+
+#fleurgif {
+  width: 47%;
+  margin: 0%;
+  border-radius: 100px;
+}
+
+.fleurlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.fleurlist figure {
+  margin: 0%;
+}
+
+.fleurlist ol, .paraccompagnement ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 7%;
+  height: 230px;
+}
+ol li {
+  text-align: center;
+}
+
+#secaccompagnement {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+#secaccompagnement figure {
+  width: 30%;
+  display: flex;
+align-items: center;
+}
+
+.paraccompagnement{
+  margin-left: 4%;
+}
+.paraccompagnement h2 {
+  text-align: center;
+}
+
+.paraccompagnement ol {
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+#section3 {
+  background-image: url(../img/image2.jpg);
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  height: 920px;
+  display: flex;
+justify-content: flex-end;
+flex-direction: column;
+align-items: flex-end;
+margin-top: 5%;
+}
+
+#section3 figure {
+  width: 28%;
+margin: 0% 66% 4% 0%;
+}
+
+#section3 h2 {
+  margin-bottom: 10%;
+margin-right: 19%;
+font-size: 36px;
+}
+
+#section3 ul {
+  text-align: center;
+  list-style-type: none;
+  margin-right: 4%;
+height: 309px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+width: 55%;
+margin-bottom: 5%;
+}
+
+#section3 ul li {
+  font-style: italic;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+#section3 ul li span {
+  font-weight: lighter;
+  margin-top: 2%;
+}
+
+#section3 ul .plus {
+  text-align: center;
+}
+#section3 ul li a {
+  text-decoration: none;
+  color: white;
+  font-style: normal;
+  text-align: center;
+}
+
+#contact {
+  margin-top: 4%;
+}
+
+#contact ul {
+  display: flex;
+  list-style-type: none;
+}
+
+footer{
+  justify-content: center;
+  align-self: center;
+  display:flex;
+  flex-direction: column;
+}
+.footerimage{
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-around;*/
+  margin: 5px auto;
+}
+footer a{
+  margin:2px;
+}
+
+footer p{
+  text-align: center;
+  margin-top: 8px;
+}
+footer img{
+  width: 30px;
+  height: 30px;
+}
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
