@@ -95,6 +95,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   body {
+     font-family: 'Open Sans Condensed', sans-serif, arial;
+   }
+
   * {
     margin: 0;
     padding: 0;
@@ -302,6 +306,44 @@ font-style: italic;
   text-align: center;
 }
 
+h1 {
+  text-align: center;
+}
+
+cite p{
+  text-align: center;
+  padding: 2%;
+  border-top: #c3b076 solid 1px;
+  border-bottom: #c3b076 solid 1px;
+  font-size: 25px;
+}
+.presentation, .presentation2{
+  padding: 5%;
+}
+
+.presentation figure, .presentation2 figure {
+  width: 20%;
+  margin:auto;
+}
+
+#personne{
+  font-size: 25px;
+
+}
+
+#commentaire{
+  font-family: cursive;
+  font-size: 20px;
+}
+.presentation p, .presentation2 p{
+  text-align: center;
+  padding-top: 5%;
+  border-bottom: #c3b076 solid 1px;
+  padding-bottom: 5%;
+  width: 50%;
+  margin: auto;
+}
+
 footer{
   /*background-color: #656565;*/
   justify-content: center;
@@ -328,7 +370,25 @@ footer img{
   width: 30px;
   height: 30px;
 }
+
+
+.presentation p, .presentation2 p {
+    text-align: center;
+    padding-top: 5%;
+    border-bottom: #c3b076 solid 1px;
+    padding-bottom: 5%;
+    width: 91%;
+    margin: auto;
+}
 @media (min-width: 768px) {
+  .presentation p, .presentation2 p {
+    text-align: center;
+    padding-top: 5%;
+    border-bottom: #c3b076 solid 1px;
+    padding-bottom: 5%;
+    width: 50%;
+    margin: auto;
+}
 
   #section1 {
     background-image: url(../img/Image1tab.jpg);
@@ -579,6 +639,7 @@ margin-top: 5%;
 }
 
 #section3 figure {
+  display: block;
   width: 28%;
 margin: 0% 66% 4% 0%;
 }
