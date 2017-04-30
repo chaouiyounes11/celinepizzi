@@ -473,8 +473,8 @@ header nav ul li a {
 
 header nav ul li a:hover {
   color: #C3B076;
-  border-bottom: 3px solid #C3B076;
-  transition: 0.1s;
+  border-bottom: 0.1px solid #C3B076;
+  transition: 0.3s;
 }
 
 
